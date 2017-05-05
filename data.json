@@ -1,0 +1,19 @@
+{  
+    "records": [  
+        {  
+        	"menuItem": "Dev",
+    		"subMenuItem": "Base64-Converter",
+    		"html": "base64.html",
+    		"jsFile": "base64.js"
+        },{  
+        	"menuItem": "Dev",
+    		"subMenuItem": "JSON-Formatter",
+    		"html": "JSON.html"
+        },{  
+        	"menuItem": "Image Processing",
+    		"subMenuItem": "XSD-Converter"
+        }
+    ]
+    
+}  
+
