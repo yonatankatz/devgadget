@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://yonatankatz.github.io/online-tools/sitemap.xml
+Sitemap: https://devgadget.com/sitemap.xml
