@@ -38,8 +38,8 @@ h2.section-title {
 }
 
 h2 {
-	font-size: 18px;
-	line-height: 36px;
+	font-size: 1.52em;
+	line-height: 1.5em;
 }
 
 p.space {
@@ -148,7 +148,7 @@ body {
 }
 
 .content-inner h1 {
-	font-size: 18px;
+	font-size: 2em;
 	margin-bottom: 15px;
 	letter-spacing: 0;
 	/* font-size: 18px; */

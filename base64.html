@@ -16,51 +16,31 @@
     <meta name="description" content="Base64 Online Converter Tool" />
     <meta name="keywords" content="Base64, Converter, Online, Tools" />
     <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body ng-app="app">
+    <div analytics></div>
+    <div menu></div>
     <div class="row">
-        <div menu></div>
         <!-- real body -->
-        <div class="col-md-9 col-xs-12 " class="root">
+        <div class="col-md-9 col-xs-12 root" >
             <div class="col-md-12 sideNavLg-big">
                 <div class="pgHolder">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="content-inner">
                                 <h1>Base 64 Encoder / Decoder</h1>
-                                <p>Encodes or decodes a string so that it conforms to the Base64
-                                    Data Encodings specification (RFC 4648).</p>
-                                <p>
-                                    <strong>If you are decoding a binary file, use the 'DECODE
-                                        AND DOWNLOAD' button. The decoder will try to figure out the file
-                                        type if it can. The maximum size limit for file upload is 2
-                                        megabytes. All files bigger than 500k will be output to a new
-                                        window for performance reason and to prevent your browser from
-                                        being unresponsive.</strong>
-                                </p>
-                                <p>
-                                    If you want to learn more about base64 encoding, jump to the <a
-                                        href="#base64-encoding-explained">Base64 Encoding Explained</a>
-                                    section of this page.
-                                </p>
                                 <div id="notifications"></div>
                                 <div class="form-wrapper">
-
-
-
-
                                     <div class="title first">
                                         <span class="option"></span> <span class="option-text">Copy-paste
                             the string to encode or decode here</span>
                                     </div>
-                                    <textarea id="input" name="input"></textarea>
-
-
+                                    <textarea id="input" name="input" default-component ></textarea>
                                     <div class="buttons">
                                         <button class="btn primary" id="encode">ENCODE</button>
                                         <button class="btn primary" id="decode">DECODE</button>
                                     </div>
-
                                 </div>
                                 <div class="form-wrapper">
                                     <div class="title first">
@@ -69,90 +49,9 @@
                                     </div>
                                     <p id="output"></p>
                                 </div>
-                                <h2 id="base64-encoding-explained" class="section-title">Base64
-                                    Encoding Explained</h2>
-
-                                <h3>Why do I need Base64 encoding?</h3>
-                                <p class="space">Base64 is an encoding scheme used to represent
-                                    binary data in an ASCII format. This is useful when binary data
-                                    needs to be sent over media that are usually designed to handle
-                                    textual data. Concrete examples would be sending images in an XML
-                                    file or in an email attachment.</p>
-                                <h3>How does Base64 encoding work?</h3>
-                                <p>Bytes forming the data are broken into buffers of 24 bits (3
-                                    bytes at a time). The resulting buffer of 3 bytes is then broken in
-                                    4 packs of 6 bits each. Those 6 bits form a number corresponding to
-                                    the index in the character set supported by Base64 (A-Z, a-z, 0-9, +
-                                    and /). If the number of bytes are not in numbers of three, then
-                                    padding is used; == for 1 byte and = for 2 bytes.</p>
-                                <p class="space">
-                                    Consult <a href="http://en.wikipedia.org/wiki/Base64"
-                                               target="_blank">wikipedia</a> for more information.
-                                </p>
-
-                                <h3>How can I embed Base64 encoded resource directly into HTML,
-                                    XML and CSS files?</h3>
-                                <p class="space">Listed here are a few examples on how to embed
-                                    Base64 resources within different web documents.</p>
-                                <ul>
-                                    <li><strong>HTML JavaScript embedding:</strong><br> <code
-                                            class="prettyprint nooverflow">
-                                        <span class="pln"> </span><span class="tag">&lt;script</span><span
-                                            class="pln"> </span><span class="atn">type</span><span
-                                            class="pun">=</span><span class="atv">"text/javascript"</span><span
-                                            class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span
-                                            class="atv">"data:text/javascript;base64,/9j/4AAQSkZJRgABAQEAWgBaAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAAB..."</span><span
-                                            class="tag">&gt;&lt;/script&gt;</span><span class="pln"> </span>
-                                    </code></li>
-                                    <li><strong>HTML CSS embedding:</strong><br> <code
-                                            class="prettyprint nooverflow">
-                                        <span class="pln"> </span><span class="tag">&lt;link</span><span
-                                            class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span
-                                            class="atv">"stylesheet"</span><span class="pln"> </span><span
-                                            class="atn">type</span><span class="pun">=</span><span
-                                            class="atv">"text/css"</span><span class="pln"> </span><span
-                                            class="atn">href</span><span class="pun">=</span><span
-                                            class="atv">"data:text/css;base64,/9j/4AAQSkZJRgABAQEAWgBaAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAAB..."</span><span
-                                            class="pln"> </span><span class="tag">/&gt;</span><span
-                                            class="pln"> </span>
-                                    </code></li>
-                                    <li><strong>HTML image embedding:</strong><br> <code
-                                            class="prettyprint nooverflow">
-                                        <span class="pln"> </span><span class="tag">&lt;img</span><span
-                                            class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span
-                                            class="atv">"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAWgBaAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAAB..."</span><span
-                                            class="pln"> </span><span class="tag">/&gt;</span><span
-                                            class="pln"> </span>
-                                    </code></li>
-                                    <li><strong>XML image embedding:</strong><br> <code
-                                            class="prettyprint nooverflow">
-                                        <span class="pln"> </span><span class="tag">&lt;xml&gt;</span><br>
-                                        <span class="pln"> &nbsp;&nbsp;&nbsp;</span><span class="tag">&lt;image&gt;</span><span
-                                            class="pln">data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAWgBaAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAAB...</span><span
-                                            class="tag">&lt;/image&gt;</span><br>
-                                        <span class="pln"> </span><span class="tag">&lt;/xml&gt;</span><span
-                                            class="pln"> </span>
-                                    </code></li>
-                                    <li><strong>CSS image embedding:</strong><br> <code
-                                            class="prettyprint nooverflow">
-                                        <span class="pln"> </span><span class="pun">.</span><span
-                                            class="pln">someclass </span><span class="pun">{</span><br>
-                                        <span class="pln"> &nbsp;&nbsp;&nbsp;background</span><span
-                                            class="pun">-</span><span class="pln">image</span><span
-                                            class="pun">:</span><span class="pln"> url</span><span
-                                            class="pun">(</span><span class="str">'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAWgBaAAD/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAAB...'</span><span
-                                            class="pun">);</span><br>
-                                        <span class="pln"> </span><span class="pun">}</span><br>
-                                        <span class="pln"> </span>
-                                    </code></li>
-                                </ul>
-                                <p></p>
-
-                                <h3>Is Base64 secure and can it be used to encrypt or obfuscate
-                                    my data?</h3>
-                                <p class="space">Hell no! Base64 is not for encryption purposes
-                                    and is not secure at all. It's an encoding mechanism, nothing more.
-                                </p>
+                                <h2>
+                                    Base64 is a group of similar binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation. The term Base64 originates from a specific MIME content transfer encoding.
+                                </h2>
                             </div>
                         </div>
                     </div>

@@ -10,10 +10,6 @@ var Base64 = {
 		return atob(input)
 
 	},
-
-
-
-
 }
 
 var encode = document.getElementById('encode'), decode = document
