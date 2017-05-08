@@ -176,3 +176,7 @@ textarea {
 .root {
     padding: 1%;
 }
+
+.buttons .checkbox {
+    padding-left: 30px;
+}

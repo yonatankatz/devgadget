@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Base64 Encoder - Online Tools - devgadget.com</title>
+    <title>Remove Line Breaks - Online Tools - devgadget.com</title>
     <link rel="stylesheet" href="css/3rd-party/bootstap/bootstrap.min.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/dev.css">
@@ -13,8 +13,8 @@
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Base64 Encoding / Decoding Online Tool" />
-    <meta name="keywords" content="Base64, Encode, Decode, Online Tools" />
+    <meta name="description" content="Remove Line Breaks Online Tool" />
+    <meta name="keywords" content="Line Breaks, Remove, String Formatting, Online Tools" />
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -29,33 +29,33 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="content-inner">
-                                <h1>Base 64 Encoder / Decoder</h1>
+                                <h1>Remove Line Breaks</h1>
                                 <div id="notifications"></div>
                                 <div class="form-wrapper">
                                     <div class="title first">
                                         <span class="option"></span> <span class="option-text">Copy-paste
-                            the string to encode or decode here</span>
+                            the string to reformat</span>
                                     </div>
                                     <textarea id="input" name="input" default-component ></textarea>
                                     <div class="buttons">
-                                        <button class="btn primary" id="encode">ENCODE</button>
-                                        <button class="btn primary" id="decode">DECODE</button>
+                                        <button class="btn primary" id="removeLineBreaks">Remove Line Breaks</button>
+                                        <label class="checkbox checkbox-inline"><input id="reduceWhitespaces" type="checkbox" checked>Reduce whitespaces</label>
                                     </div>
                                 </div>
                                 <div class="form-wrapper">
                                     <div class="title first">
-                                        <textarea readonly id="output"></textarea>
+                                        <span class="option"></span> <span class="option-text">Your
+                            Output : </span>
+                                    </div>
+                                    <textarea readonly id="output"></textarea>
                                 </div>
                             </div>
-                                <h2>
-                                    Base64 is a group of similar binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation. The term Base64 originates from a specific MIME content transfer encoding.
-                                </h2>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="js/base64.js" type="text/javascript"></script>
+    <script src="js/line-breaks.js" type="text/javascript"></script>
 </body>
 </html>
