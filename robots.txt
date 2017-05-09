@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://devgadget.com/sitemap.xml
+Sitemap: http://devgadget.com/sitemap.xml
