@@ -29,30 +29,30 @@ function syntaxHighlight(json) {
 }
 
 formatJson.onclick = function() {
-		var jsonStr = input.value || '';
-        if (!jsonStr) {
-            return;
-        }
-        outputRegular.innerHTML = '';
-        output.innerHTML = '';
-        error.innerHTML = '';
-        var jsonObj;
-        try {
-            jsonObj = JSON.parse(jsonStr);
-        }
-        catch(err) {
-            error.innerHTML = err.message;
-            return;
-        }
+    var jsonStr = input.value || '';
+    if (!jsonStr) {
+        return;
+    }
+    outputRegular.innerHTML = '';
+    output.innerHTML = '';
+    error.innerHTML = '';
+    var jsonObj;
+    try {
+        jsonObj = JSON.parse(jsonStr);
+    }
+    catch(err) {
+        error.innerHTML = err.message;
+        return;
+    }
 
-        var formattedJsonStr = JSON.stringify(jsonObj, null, 4);
-        outputRegular.innerHTML = formattedJsonStr;
-        output.style.display = syntaxHighlightCheckbox.checked? 'block' : 'none';
-        outputRegular.style.display = syntaxHighlightCheckbox.checked? 'none' : 'block';
-		if (syntaxHighlightCheckbox.checked) {
-            formattedJsonStr = '<pre>' + syntaxHighlight(formattedJsonStr) + '</pre>';
-        }
-	    output.innerHTML = formattedJsonStr;
-		var newLinesCount = formattedJsonStr.split(/\r\n|\r|\n/).length;
-		output.rows = formattedJsonStr.split(/\r\n|\r|\n/).length + 3;
+    var formattedJsonStr = JSON.stringify(jsonObj, null, 4);
+    outputRegular.innerHTML = formattedJsonStr;
+    output.style.display = syntaxHighlightCheckbox.checked? 'block' : 'none';
+    outputRegular.style.display = syntaxHighlightCheckbox.checked? 'none' : 'block';
+    if (syntaxHighlightCheckbox.checked) {
+        formattedJsonStr = '<pre>' + syntaxHighlight(formattedJsonStr) + '</pre>';
+    }
+    output.innerHTML = formattedJsonStr;
+    var newLinesCount = formattedJsonStr.split(/\r\n|\r|\n/).length;
+    outputRegular.rows = formattedJsonStr.split(/\r\n|\r|\n/).length + 3;
 }

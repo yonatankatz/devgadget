@@ -171,6 +171,16 @@ h1 {
 
 textarea {
     width: 100%;
+    min-height: 100px;
+}
+
+.single-line {
+    width: 100%;
+    min-height: 30px !important;
+}
+
+
+.textarea-input {
     height: 100px;
 }
 .root {
