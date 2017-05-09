@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Json Formatter - Online Tools - devgadget.com</title>
+    <link rel="stylesheet" href="css/3rd-party/bootstap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/dev.css">
+    <script src="js/3rd-party/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="js/3rd-party/bootstrap/bootstrap.min.js"  type="text/javascript"></script>
+    <script src="js/3rd-party/angular/angular.min.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Json Formatter Online Tool" />
+    <meta name="keywords" content="Json, Formatter, String Formatting, Online Tools, Free" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body ng-app="app">
+    <div analytics></div>
+    <div menu></div>
+    <div class="row">
+        <!-- real body -->
+        <div class="col-md-9 col-xs-12 root" >
+            <div class="col-md-12 sideNavLg-big">
+                <div class="pgHolder">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="content-inner">
+                                <h1>Json Formatter</h1>
+                                <div id="notifications"></div>
+                                <div class="form-wrapper">
+                                    <div class="title first">
+                                        <span class="option"></span> <span class="option-text">Copy-paste
+                            the string to reformat</span>
+                                    </div>
+                                    <textarea id="input" name="input" default-component ></textarea>
+                                    <div><span id="errorMsg"></span></div>
+                                    <div class="buttons">
+                                        <button default-action class="btn primary" id="formatJson">Format Json</button>
+                                        <label class="checkbox checkbox-inline"><input id="syntaxHighlight" type="checkbox" checked>Syntax highlighting</label>
+                                    </div>
+                                </div>
+                                <div class="form-wrapper">
+                                    <div class="title first">
+                                        <span class="option"></span> <span class="option-text">Your
+                            Output : </span>
+                                    </div>
+                                    <div id="outputHighlighted"></div>
+                                    <textarea readonly id="outputRegular"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>
+                        JSON, or JavaScript Object Notation, is a minimal, readable format for structuring data. It is used primarily
+                        to transmit data between a server and web application, as an alternative to XML.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/json.js" type="text/javascript"></script>
+</body>
+</html>

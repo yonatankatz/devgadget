@@ -180,3 +180,21 @@ textarea {
 .buttons .checkbox {
     padding-left: 30px;
 }
+
+pre {
+    outline: 1px
+    solid #ccc;
+    padding: 5px;
+    margin: 5px;
+     background-color: white;
+}
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }
+
+#errorMsg {
+    font-size: 1.0em;
+    color: red;
+}
