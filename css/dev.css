@@ -37,11 +37,6 @@ h2.section-title {
 	border-bottom: 1px solid #CCC;
 }
 
-h2 {
-	font-size: 1.52em;
-	line-height: 1.5em;
-}
-
 p.space {
 	margin-bottom: 15px;
 }
@@ -133,10 +128,6 @@ div.buttons {
 	background-color: #F0F7FF;
 }
 
-.content-inner {
-	margin: 0 0 15px 15px;
-}
-
 body {
 	background-color: #ffffff;
 	margin: 0;
@@ -161,13 +152,6 @@ body {
 	margin-top: -10px;
 }
 
-h1 {
-	margin-bottom: 18px;
-	font-size: 30px;
-	line-height: 36px;
-	font-weight: bold;
-	color: #404040;
-}
 
 textarea {
     width: 100%;
