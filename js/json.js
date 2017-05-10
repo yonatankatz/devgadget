@@ -55,4 +55,4 @@ formatJson.onclick = function() {
     output.innerHTML = formattedJsonStr;
     var newLinesCount = formattedJsonStr.split(/\r\n|\r|\n/).length;
     outputRegular.rows = formattedJsonStr.split(/\r\n|\r|\n/).length + 3;
-}
+};

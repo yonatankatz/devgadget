@@ -1,6 +1,6 @@
-var removeLines = document.getElementById('removeLineBreaks')
-var reduceWS = document.getElementById('reduceWhitespaces')
-var output = document.getElementById('output')
+var removeLines = document.getElementById('removeLineBreaks');
+var reduceWS = document.getElementById('reduceWhitespaces');
+var output = document.getElementById('output');
 var input = document.getElementById('input');
 
 removeLines.onclick = function() {
@@ -11,4 +11,4 @@ removeLines.onclick = function() {
 		    str = str.replace(/(\r\n|\n|\r)/gm, '');
 		}
 		output.innerHTML = str;
-}
+};

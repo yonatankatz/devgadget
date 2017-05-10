@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Escape Strings - Online Tools</title>
+    <link rel="stylesheet" href="css/3rd-party/bootstap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/dev.css">
+    <script src="js/3rd-party/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="js/3rd-party/bootstrap/bootstrap.min.js"  type="text/javascript"></script>
+    <script src="js/3rd-party/angular/angular.min.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Escape json, xml and html online tool." />
+    <meta name="keywords" content="Escape json, escape xml, escape html, escape strings, Online Tools, Free" />
+    <meta name="robots" content="index, follow, NOODP" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body ng-app="app">
+    <div analytics></div>
+    <div menu></div>
+    <div class="row">
+        <!-- real body -->
+        <div class="col-md-9 col-xs-12 root" >
+            <div class="col-md-12 sideNavLg-big">
+                <div class="pgHolder">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="content-inner">
+                                <h1>Escape Json, Xml and Html Strings</h1>
+                                <div id="notifications"></div>
+                                <div class="form-wrapper">
+                                    <div class="title first">
+                                        <span class="option"></span> <span class="option-text">Copy-paste
+                            the string to escape</span>
+                                    </div>
+                                    <textarea id="input" name="input" class="textarea-input" default-component ></textarea>
+                                    <div class="buttons">
+                                        <button class="btn primary" id="escapeJson">Escape json</button>
+                                        <button class="btn primary" id="escapeXml">Escape xml</button>
+                                        <button class="btn primary" id="escapeHtml">Escape html</button>
+                                    </div>
+                                </div>
+                                <div class="form-wrapper">
+                                    <div class="title first">
+                                        <span class="option"></span> <span class="option-text">Your
+                            Output : </span>
+                                    </div>
+                                    <textarea readonly id="output"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>
+                        This tool allow you to escape illegal characters in a certain format. For example, queue is illegal
+                        character in a value of json property, as well as < or > in xml text value.
+                        Put your string in the input box, and press the relevant escape button to get a valid string for
+                        the format you need.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/string-escape.js" type="text/javascript"></script>
+</body>
+</html>
