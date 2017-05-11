@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/online-tools.iml" filepath="$PROJECT_DIR$/.idea/online-tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/devgadget.iml" filepath="$PROJECT_DIR$/.idea/devgadget.iml" />
     </modules>
   </component>
 </project>
