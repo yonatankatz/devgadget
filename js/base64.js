@@ -19,7 +19,7 @@ decode.onclick = function() {
 	$(document).ready(function() {
 		try
 		{
-			var byteArr = base64js.toByteArray(output.innerHTML)
+			var byteArr = base64js.toByteArray(input.value)
 			output.innerHTML =  new TextDecoder('utf-8').decode(byteArr)
 		}
 		catch (err)
