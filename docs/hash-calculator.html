@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cryptographic hash calculator</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Cryptographic hash calculator. Computes SHA-1 , SHA-256 , MD5, SHA-512" />
+    <meta name="keywords" content="Cryptography, Hash , SHA, Digest, SHA-256, SHA-1 , SHA-512, MD5, Online Tools, Free" />
+    <meta name="robots" content="index, follow, NOODP" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body ng-app="app">
+<link rel="stylesheet" href="css/3rd-party/bootstap/bootstrap.min.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/dev.css">
+    <div analytics></div>
+    <div menu></div>
+    <div class="row">
+        <!-- real body -->
+        <div class="col-md-9 col-xs-12 root" >
+            <div class="col-md-12 sideNavLg-big">
+                <div class="pgHolder">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="content-inner">
+                                <h1>SHA calculator</h1>
+                                <div id="notifications"></div>
+                                <div class="form-wrapper">
+                                    <textarea id="input" name="input" placeholder="Enter your text here..." class="textarea-input" default-component ></textarea>
+                                </div>
+                                <div class="form-wrapper">
+                                    <table width="1200px">
+									  <tr>
+									    <th width="7%">MD5</td>
+										<td width="90%"><input style='width: 1080px; border-width: 1px; padding: 5px; font-family: courier' type="text" id="md5_output" select-on-focus readonly/></td>
+									    <td width="3%"><button><img src="./images/copy.png" alt="Copy MD5" height="16" width="16" onclick="copyTextToClipboard(document.getElementById('md5_output').value)"></button></td>
+									  </tr>
+									  <tr>
+									    <th width="7%">SHA-1</td>
+										<td width="90%"><input style='width: 1080px; border-width: 1px; padding: 5px; font-family: courier' type="text" id="sha1_output" select-on-focus readonly/></td>
+									    <td width="3%"><button><img src="./images/copy.png" alt="Copy SHA-1" height="16" width="16" onclick="copyTextToClipboard(document.getElementById('sha1_output').value)"></button></td>
+									  </tr>
+									  <tr>
+									    <th>SHA-256</td>
+									    <td><input type="text" style='width: 1080px; border-width: 1px; padding: 5px; font-family: courier' id="sha256_output" select-on-focus readonly/></td>
+									    <td><button><img src="./images/copy.png" alt="Copy SHA-256" height="16" width="16" onclick="copyTextToClipboard(document.getElementById('sha256_output').value)"></button></td>
+									  </tr>
+									  <tr>
+									    <th>SHA-512</td>
+									    <td><input type="text" style='width: 1080px; border-width: 1px; padding: 5px; font-family: courier' id="sha512_output" select-on-focus readonly/></td>
+									    <td><button><img src="./images/copy.png" alt="Copy SHA-512" height="16" width="16" onclick="copyTextToClipboard(document.getElementById('sha512_output').value)"></button></td>
+									  </tr>
+									</table>
+                                </div>
+                                <h2>
+
+                                </h2>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/3rd-party/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="js/3rd-party/bootstrap/bootstrap.min.js"  type="text/javascript"></script>
+    <script src="js/3rd-party/angular/angular.min.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/hash-calc.js" type="text/javascript"></script>
+</body>
+</html>
