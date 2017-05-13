@@ -23,32 +23,32 @@
                 <div class="pgHolder">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="content-inner">
+                            <div class="sha-calc content-inner">
                                 <h1>SHA calculator</h1>
                                 <div id="notifications"></div>
                                 <div class="form-wrapper">
                                     <textarea id="input" name="input" placeholder="Enter your text here..." class="textarea-input" default-component ></textarea>
                                 </div>
                                 <div class="form-wrapper">
-                                    <table width="1200px">
+                                    <table width="100%">
 									  <tr>
-									    <th width="7%">MD5</td>
-										<td width="90%"><input style='width: 1080px; border-width: 1px; padding: 5px; font-family: courier' type="text" id="md5_output" select-on-focus readonly/></td>
-									    <td width="3%"><button><img src="./images/copy.png" alt="Copy MD5" height="16" width="16" onclick="copyTextToClipboard(document.getElementById('md5_output').value)"></button></td>
+									    <th>MD5</td>
+										<td><input class="output-box" type="text" id="md5_output" select-on-focus readonly/></td>
+									    <td><button><img src="./images/copy.png" alt="Copy MD5" height="16" width="16" onclick="copyTextToClipboard(document.getElementById('md5_output').value)"></button></td>
 									  </tr>
 									  <tr>
-									    <th width="7%">SHA-1</td>
-										<td width="90%"><input style='width: 1080px; border-width: 1px; padding: 5px; font-family: courier' type="text" id="sha1_output" select-on-focus readonly/></td>
-									    <td width="3%"><button><img src="./images/copy.png" alt="Copy SHA-1" height="16" width="16" onclick="copyTextToClipboard(document.getElementById('sha1_output').value)"></button></td>
+									    <th>SHA-1</td>
+										<td><input class="output-box" type="text" id="sha1_output" select-on-focus readonly/></td>
+									    <td><button><img src="./images/copy.png" alt="Copy SHA-1" height="16" width="16" onclick="copyTextToClipboard(document.getElementById('sha1_output').value)"></button></td>
 									  </tr>
 									  <tr>
 									    <th>SHA-256</td>
-									    <td><input type="text" style='width: 1080px; border-width: 1px; padding: 5px; font-family: courier' id="sha256_output" select-on-focus readonly/></td>
+									    <td><input type="text" class="output-box" id="sha256_output" select-on-focus readonly/></td>
 									    <td><button><img src="./images/copy.png" alt="Copy SHA-256" height="16" width="16" onclick="copyTextToClipboard(document.getElementById('sha256_output').value)"></button></td>
 									  </tr>
 									  <tr>
 									    <th>SHA-512</td>
-									    <td><input type="text" style='width: 1080px; border-width: 1px; padding: 5px; font-family: courier' id="sha512_output" select-on-focus readonly/></td>
+									    <td><input type="text" class="output-box" id="sha512_output" select-on-focus readonly/></td>
 									    <td><button><img src="./images/copy.png" alt="Copy SHA-512" height="16" width="16" onclick="copyTextToClipboard(document.getElementById('sha512_output').value)"></button></td>
 									  </tr>
 									</table>

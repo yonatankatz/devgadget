@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://devgadget.com/base64-encoder.html</loc>
+        <loc>https://devgadget.com/base64-encoder.html</loc>
     </url>
     <url>
-        <loc>http://devgadget.com/remove-line-breaks.html</loc>
+        <loc>https://devgadget.com/remove-line-breaks.html</loc>
     </url>
     <url>
-        <loc>http://devgadget.com/json-formatter.html</loc>
+        <loc>https://devgadget.com/json-formatter.html</loc>
     </url>
     <url>
-        <loc>http://devgadget.com/url-encoder.html</loc>
+        <loc>https://devgadget.com/url-encoder.html</loc>
     </url>
     <url>
-        <loc>http://devgadget.com/escape-strings.html</loc>
+        <loc>https://devgadget.com/escape-strings.html</loc>
     </url>
     <url>
-            <loc>http://devgadget.com/hash-calculator.html</loc>
+        <loc>https://devgadget.com/hash-calculator.html</loc>
     </url>
 </urlset>
