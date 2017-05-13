@@ -129,7 +129,6 @@ app.directive("selectOnFocus", function($timeout) {
             // see http://stackoverflow.com/questions/480735/select-all-contents-of-textbox-when-it-receives-focus-javascript-or-jquery
             $timeout(function() {
             $(element[0]).focus(function(){
-                console.log('ere');
                 $(this).one('mouseup', function(event){
                     event.preventDefault();
                 }).select();

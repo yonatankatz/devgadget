@@ -15,6 +15,11 @@ window.onload = function () {
 		// IE-specific event handling code
 		input.attachEvent('onpropertychange', computeHashValues);
 	}
+	setTimeout(function() {
+	    if (input.value) {
+	        computeHashValues(); // calc the hashes when we get into this page with query parameter (...?q=some-value)
+	    }
+	}, 100);
 };
 
 var computeHashValues = function() {
