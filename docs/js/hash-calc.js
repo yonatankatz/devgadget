@@ -15,7 +15,6 @@ window.onload = function () {
 		// IE-specific event handling code
 		input.attachEvent('onpropertychange', computeHashValues);
 	}
-	computeHashValues();
 };
 
 var computeHashValues = function() {
