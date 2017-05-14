@@ -220,3 +220,11 @@ pre {
     width: 7%;
     min-width: 80px;
 }
+
+.crc-calc .radio-buttons {
+    margin-top: 10px;
+}
+
+.crc-calc .output {
+    margin-top: 1%;
+}

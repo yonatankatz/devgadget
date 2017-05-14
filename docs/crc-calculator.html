@@ -23,20 +23,25 @@
 <link rel="stylesheet" href="css/dev.css">
     <div analytics></div>
     <div menu></div>
-    <div class="row">
+    <div class="crc-calc row">
         <!-- real body -->
         <div class="col-md-9 col-xs-12 root" >
             <div class="col-md-12 sideNavLg-big">
                 <div class="pgHolder">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="crc-calc content-inner">
+                            <div class="content-inner">
                                 <h1>CRC calculator</h1>
                                 <div id="notifications"></div>
                                 <div class="form-wrapper">
                                     <textarea id="input" name="input" placeholder="Enter your text here..." class="textarea-input" default-component ></textarea>
                                 </div>
-                                <div class="form-wrapper">
+                                <div><span id="errorMsg"></span></div>
+                                <div class="radio-buttons">
+                                    <label class="radio-inline"><input checked type="radio" name="inputType" value="utf" >UTF-8</label>
+                                    <label class="radio-inline"><input type="radio" name="inputType" value="hex">HEX</label>
+                                </div>
+                                <div class="form-wrapper output">
                                     <table width="100%">
 									  <tr>
 									    <th>CRC-8</td>
