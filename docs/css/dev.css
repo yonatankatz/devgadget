@@ -208,3 +208,15 @@ pre {
     width: 7%;
     min-width: 80px;
 }
+
+.crc-calc .output-box {
+    width: 100%;
+    border-width: 1px;
+    padding: 5px;
+    font-family: courier;
+}
+
+.crc-calc th {
+    width: 7%;
+    min-width: 80px;
+}
