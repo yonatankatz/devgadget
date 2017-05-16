@@ -40,13 +40,17 @@
                                         <textarea id="input" name="input" class="textarea-input" ></textarea>
                                         <div class="buttons">
                                             <button class="btn primary" id="copyText">Copy text</button>
+                                            <span id="textCopiedMsg" class="hide" >Text copied!</span>
                                         </div>
                                     </div>
-                                    <div class="form-wrapper hide" id="outputLinkDiv" >
+
+                                    <div class="form-wrapper">
                                         <div class="title first">
                                             <span class="option"></span> <span class="option-text">Link to data: </span>
                                         </div>
-                                        <input type="text" id="outputLink" class="link-output" class select-on-focus readonly/>
+                                        <label for="outputLink" id="baseLink">/</label>
+                                        <input type="text" id="outputLink" class="link-output"/>
+                                        <span id="errorMsg"></span>
                                     </div>
                                 </div>
                                 <div id="pasteMode" class="hide">
