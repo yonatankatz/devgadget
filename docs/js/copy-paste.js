@@ -30,8 +30,12 @@ var database = firebase.database();
 var token = window.location.search.substr(1);
 if (token) {
     firebase.database().ref(token).once('value').then(function(storedValue) {
-      output.innerHTML = (storedValue.val().value);
-      $('#pasteMode').removeClass('hide');
+        if (!storedValue.val() || !storedValue.val().value) {
+            console.log('no value found for token ' + token);
+            return;
+        }
+        output.innerHTML = (storedValue.val().value);
+        $('#pasteMode').removeClass('hide');
     });
 }
 else {
