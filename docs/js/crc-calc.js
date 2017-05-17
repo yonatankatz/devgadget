@@ -26,11 +26,13 @@ window.onload = function () {
 };
 
 var isHex = function (h) {
+    h = h.toLowerCase();
     var a = parseInt(h,16);
     return (a.toString(16) === h)
 }
 
 var decodeHexStringToByteArray = function (hexString) {
+  hexString = hexString.toLowerCase();
   var result = [];
   if (hexString.length % 2 == 1){
     hexString += '0'
