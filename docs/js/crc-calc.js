@@ -32,6 +32,9 @@ var isHex = function (h) {
 
 var decodeHexStringToByteArray = function (hexString) {
   var result = [];
+  if (hexString.length % 2 == 1){
+    hexString += '0'
+  }
   while (hexString.length >= 2) {
       result.push(parseInt(hexString.substring(0, 2), 16));
       hexString = hexString.substring(2, hexString.length);
@@ -47,6 +50,10 @@ var initValues = function() {
 };
 
 var computeCrcValues = function() {
+	if (input.value == ""){
+		initValues();
+		return;
+	}
     var inputType = $("input:radio[name=inputType]:checked").val();
     var buffer;
     initValues();
