@@ -67,14 +67,17 @@ var database = firebase.database();
 
 var token = window.location.search.substr(1);
 if (token) {
-    firebase.database().ref(formatToken(token)).once('value').then(function(storedValue) {
-        if (!storedValue.val() || !storedValue.val().value) {
-            console.log('no value found for token ' + token);
-            return;
-        }
-        output.innerHTML = (storedValue.val().value);
-        $('#pasteMode').removeClass('hide');
-    });
+    var re = new RegExp(/bot|google|aolbuild|baidu|bing|msn|duckduckgo|teoma|slurp|yandex/, 'i');
+    if (!re.test(navigator.userAgent)) {
+        firebase.database().ref(formatToken(token)).once('value').then(function(storedValue) {
+            if (!storedValue.val() || !storedValue.val().value) {
+                console.log('no value found for token ' + token);
+                return;
+            }
+            output.innerHTML = (storedValue.val().value);
+            $('#pasteMode').removeClass('hide');
+        });
+    }
 }
 else {
     $('#copyMode').removeClass('hide');
