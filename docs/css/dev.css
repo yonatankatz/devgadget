@@ -229,14 +229,16 @@ pre {
     margin-top: 1%;
 }
 
-.clipboard .link-output {
-    height: 30px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    color: #333;
-    flex-grow: 1;
-    max-width: calc(100% - 10px);
-    min-width: 100px;
-    padding: 0 10px;
+.clipboard #baseLink
+{
+    background-color: #FFF;
+    color: #888;
+    line-height:15px;
+    padding:3px;
+    font-size:9pt;
+}
+
+.clipboard #outputLink
+{
+    background-color: #FFF;
 }

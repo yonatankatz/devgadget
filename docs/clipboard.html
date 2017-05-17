@@ -41,6 +41,7 @@
                                         <div class="buttons">
                                             <button class="btn primary" id="copyText">Copy text</button>
                                             <span id="textCopiedMsg" class="hide" >Text copied!</span>
+                                            <i id="textCopingLoader" class="fa fa-spinner fa-spin hide" style="font-size:28px"></i>
                                         </div>
                                     </div>
 
@@ -48,8 +49,10 @@
                                         <div class="title first">
                                             <span class="option"></span> <span class="option-text">Link to text: </span>
                                         </div>
-                                        <label for="outputLink" id="baseLink">/</label>
-                                        <input type="text" id="outputLink" class="link-output"/>
+                                        <span class="textbox" id="baseLink">
+
+                                        </span>
+                                        <input type="text" id="link" class="link-output"/>
                                         <button class="btn secondary" onclick="copyLink()">Copy link</button>
                                         <br>
                                         <span id="errorMsg"></span>
@@ -63,6 +66,13 @@
                                         <textarea select-on-focus readonly id="output"></textarea>
                                         <button id="copyToClipboard" copy-to-clipboard class="btn secondary copy-clipboard">Copy to clipboard</button>
                                     </div>
+                                </div>
+                                <div id="loadingMode" class="hide">
+                                    <i id="pageLoader" class="fa fa-spinner fa-spin" style="font-size:50px"></i>
+                                    <span style="font-size:24px;">Loading...</span>
+                                </div>
+                                <div id="noDataFound" class="hide">
+                                    <span style="font-size:24px;">No data found</span>
                                 </div>
                             </div>
                         </div>
@@ -79,6 +89,7 @@
     <script src="js/3rd-party/bootstrap/bootstrap.min.js"  type="text/javascript"></script>
     <script src="js/3rd-party/angular/angular.min.js" type="text/javascript"></script>
     <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/app.js" type="text/javascript"></script>
     <script src="js/clipboard.js" type="text/javascript"></script>
 </body>

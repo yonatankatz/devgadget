@@ -1,24 +1,24 @@
 var copyText = document.getElementById('copyText');
-var outputLink = document.getElementById('outputLink');
+var link = document.getElementById('link');
 var output = document.getElementById('output');
 var input = document.getElementById('input');
 var error = document.getElementById('errorMsg');
 
 var initErrorMsg = function () {
-   if (outputLink.value) {
+   if (link.value) {
         error.innerHTML = '';
    }
 };
 
 window.onload = function () {
 
-	if (outputLink.addEventListener) {
+	if (link.addEventListener) {
 		// event handling code for sane browsers
-		outputLink.addEventListener('input', initErrorMsg, false);
+		link.addEventListener('input', initErrorMsg, false);
 	}
-	else if (input.attachEvent) {
+	else if (link.attachEvent) {
 		// IE-specific event handling code
-		input.attachEvent('onpropertychange', initErrorMsg);
+		link.attachEvent('onpropertychange', initErrorMsg);
 	}
 };
 
@@ -36,7 +36,7 @@ function formatToken(token) {
                 .replaceAll('%', '-');
 }
 
-function makeToken()
+function generateLink()
 {
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -47,13 +47,13 @@ function makeToken()
     return text;
 }
 
-var currentToken = localStorage.getItem("copyPasteToken");
-if (!currentToken) {
-    currentToken = makeToken();
+var clipboardLink = localStorage.getItem("clipboardLink");
+if (!clipboardLink) {
+    clipboardLink = generateLink();
 }
 
-document.getElementById('baseLink').innerHTML = location.protocol + '//' + location.host + location.pathname + '?' ;
-outputLink.value = currentToken;
+document.getElementById('baseLink').innerHTML = location.protocol + '//' + location.host + location.pathname + '?' + document.getElementById('baseLink').innerHTML;
+link.value = link.value + clipboardLink;
 
 var config = {
     apiKey: "AIzaSyA_KOm82nLzVd2S-8sXsj76APHvrBNevYk",
@@ -67,11 +67,13 @@ var database = firebase.database();
 
 var token = window.location.search.substr(1);
 if (token) {
+    $('#loadingMode').removeClass('hide');
     var re = new RegExp(/bot|google|aolbuild|baidu|bing|msn|duckduckgo|teoma|slurp|yandex/, 'i');
     if (!re.test(navigator.userAgent)) {
         firebase.database().ref(formatToken(token)).once('value').then(function(storedValue) {
+            $('#loadingMode').addClass('hide');
             if (!storedValue.val() || !storedValue.val().value) {
-                console.log('no value found for token ' + token);
+                $('#noDataFound').removeClass('hide');
                 return;
             }
             output.innerHTML = (storedValue.val().value);
@@ -89,21 +91,30 @@ function writeUserData(value, token) {
       value: value,
       time: new Date().toString()
     });
+     if(!$("#textCopingLoader").hasClass("hide")){
+        $("#textCopingLoader").addClass("hide");
+     }
+    $('#textCopiedMsg').removeClass('hide');
+
 }
 
 function copyLink() {
-    copyTextToClipboard(location.protocol + '//' + location.host + location.pathname + '?' + outputLink.value);
+    copyTextToClipboard(location.protocol + '//' + location.host + location.pathname + '?' + link.value);
 }
 
 copyText.onclick = function() {
         if (!input.value) return;
-        if (!outputLink.value) {
+        if (!link.value) {
             error.innerHTML = 'Link token cannot be empty';
             return;
         }
+         if(!$("#textCopiedMsg").hasClass("hide")){
+            $("#textCopiedMsg").addClass("hide");
+         }
+        $('#textCopingLoader').removeClass('hide');
+
 		var str = input.value;
-		var token = outputLink.value;
-		localStorage.setItem("copyPasteToken" , token);
+		var token = link.value;
+		localStorage.setItem("clipboardLink" , token);
 		writeUserData(str, token);
-		$('#textCopiedMsg').removeClass('hide');
 };
