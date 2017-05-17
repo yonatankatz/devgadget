@@ -91,6 +91,10 @@ function writeUserData(value, token) {
     });
 }
 
+function copyLink() {
+    copyTextToClipboard(location.protocol + '//' + location.host + location.pathname + '?' + outputLink.value);
+}
+
 copyText.onclick = function() {
         if (!input.value) return;
         if (!outputLink.value) {

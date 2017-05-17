@@ -231,4 +231,12 @@ pre {
 
 .copy-paste .link-output {
     height: 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    color: #333;
+    flex-grow: 1;
+    max-width: calc(100% - 10px);
+    min-width: 100px;
+    padding: 0 10px;
 }
