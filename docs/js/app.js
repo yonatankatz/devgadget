@@ -82,6 +82,23 @@ app.directive("analytics", function() {
       };
   });
 
+app.directive("personalMsg", function() {
+    return {
+       restrict : "A",
+       templateUrl : "directives/msg.html",
+       link: function(scope, element, attrs) {
+            scope.user = {name : ''};
+            scope.medium = getParameterByName("utm_medium");
+            scope.campaign = getParameterByName("utm_campaign");
+            scope.source = getParameterByName("utm_source");
+            console.log(scope.campaign + ' ' + scope.medium);
+            scope.copy = function(lang) {
+                copyTextToClipboard('https://devgadget.com/?utm_source=friends-of-friends' + lang + '&utm_campaign=' + encodeURI(scope.user.name));
+            };
+       }
+    };
+});
+
  app.directive("defaultComponent", function($timeout) {
        return {
           restrict : "A",

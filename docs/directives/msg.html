@@ -1,0 +1,84 @@
+<div ng-if="!!source">
+    <div ng-if="campaign === 'yonatank-devgadget'" style="background-color:#666699; color: white;border-radius: 25px; padding: 40px; font-size:24px" >
+        <div ng-if="medium === 'personal-en'">
+            Hi,<br>
+            <span style="font-size:30px; font-family: Verdana, Geneva, sans-serif;" >Thanks for clicking on the link I posted on Facebook.<br><br></span>
+            The reason I wanted you to click
+            here is because I want to increase this website traffic. Websites over the internet are measured by their traffic, and every single user counts!<br>
+            to be honest with you, if you are not a developer you have nothing to do here; I am honestly appreciate your help, and I would be glad if you'll ask your friends
+            to visit this site as well.<br><br>
+            But, If you are a developer, you have here some nice tools you can use. Obviously, completely free. We are planning to enlarge our tools arsenal, feel free to jump here
+            once in a while.
+            <br><br>
+            Thank you so much,<br>
+            Yonatan.
+            <p>
+                In order to forward the link to your friends, use <a href="https://devgadget.com/?utm_source=friends-of-friends">this link</a>,
+                or even better:<br>
+                Enter your name here, press on "copy link" - and send the copied link to your network!
+                <input type="text" ng-model="user.name">
+                <button ng-click="copy('-en')" class="btn secondary copy-clipboard">Copy link</button>
+            </p>
+        </div>
+        <div ng-if="medium === 'personal-he'" style="direction: rtl;">
+    הי,<br><br>
+            <span style="font-size:30px; font-family: Verdana, Geneva, sans-serif;" >תודה שנענית לפוסט שלי בפייסבוק ולחצת על הלינק!<br><br></span>
+            הסיבה שביקשתי שתלחץ על הלינק זה כדי להעלות את כמות האנשים שנכנסים לאתר. זהו אחד המדדים לפיו אתרים נמדדים, ואני מנסה להעלות את הדירוג של האתר הזה. כל גולש נחשב!<br>
+            אם להיות כנה איתך, אם אתה לא מתכנת מחשבים - אין לך כל כך מה לעשות באתר הזה. אני אמנם אשמח אם תכנס אליו מדי פעם ותעבור בין הדפים, אבל זה לא יהיה שימושי יותר מדי עבורך.
+            עם זאת, אם תרצה לעזור להעלות את הדירוג - אשמח אם תביא לאתר גם את חבריך.<br>
+            לעומת זאת, אם אתה מתכנת מחשבים (תתפלא, יש כמה כאלה מבין חברי), אז האתר הזה יכול להיות לך לעזר. נשמח אם תשתמש בו, תציע הצעות לכלים נוספים ותשתף אותו עם חבריך.
+            אני מצידי אעשה מאמץ להרחיב את מספר הכלים באתר.
+    <br><br>
+            תודה רבה!<br>
+            יונתן
+        <p>
+            כדי לשתף את הלינק הלאה, נשמח אם תפנה את חברך ל
+     <a href="https://devgadget.com/?utm_source=friends-of-friends">לינק הזה</a><br>
+            או יותר טוב: תכניס כאן את שמך, תלחץ על "העתק קישור" ותשלח את הקישור המועתק לחבריך.
+            <input type="text" ng-model="user.name">
+            <button ng-click="copy('-he')" class="btn secondary copy-clipboard">העתק קישור</button>
+        </p>
+        </div>
+    </div>
+    <div ng-if="!!campaign && !!source" style="background-color:#666699; color: white;border-radius: 25px; padding: 40px; font-size:24px" >
+        <div ng-if="source === 'friends-of-friends-en'">
+            Hi,<br>
+            <span style="font-size:30px; font-family: Verdana, Geneva, sans-serif;" >Thanks for joining {{campaign}}'s efforts, to increase this website rating.<br><br></span>
+            Our goal is to increase this website rating. Websites over the internet are measured by their traffic, and every single user counts!<br>
+            If you are not a developer you have nothing to do here; We honestly appreciate your help, and we would be glad if you'll ask your friends
+            to visit this site as well.<br><br>
+            But, If you are a developer, you have some nice tools here you can use. Obviously, completely free. We are planning to enlarge our tools arsenal, feel free to jump here
+            once in a while.
+            <br><br>
+            Thank you so much,<br>
+            DevGadget team (and {{campaign}} :) ).<br><br>
+            <p>
+                In order to forward the link to your friends, use <a href="https://devgadget.com/?utm_source=friends-of-friends">this link</a>,
+                or even better:<br>
+                Enter your name here, press on "copy link" - and send the copied link to your network!
+                <input type="text" ng-model="user.name">
+                <button ng-click="copy('-en')" class="btn secondary copy-clipboard">Copy link</button>
+            </p>
+        </div>
+        <div ng-if="source === 'friends-of-friends-he'" style="direction: rtl;">
+            הי,<br><br>
+            <span style="font-size:30px; font-family: Verdana, Geneva, sans-serif;" >תודה שנענית לבקשתו של {{campaign}} ולחצת על הלינק!<br><br></span>
+            אחד המדדים לפיו אתרים נמדדים זה כמות המבקרים בו, ואנחנו מנסים להעלות את הדירוג של האתר הזה. כל גולש נחשב!<br>
+            אם אתה לא מתכנת מחשבים - אין לך כל כך מה לעשות באתר הזה.  אמנם נשמח אם תכנס אליו מדי פעם ותעבור בין הדפים, אבל זה לא יהיה שימושי יותר מדי עבורך.
+            <br>
+            לעומת זאת, אם אתה מתכנת מחשבים, האתר הזה יכול להיות לך לעזר. נשמח אם תשתמש בו, תציע הצעות לכלים נוספים ותשתף אותו עם חבריך.
+            אנחנו מצידנו נעשה מאמץ להרחיב את מספר הכלים באתר.
+            <br><br>
+            תודה רבה!<br>
+            DevGadget
+            <p>
+                כדי לשתף את הלינק הלאה, נשמח אם תפנה את חברך ל
+                <a href="https://devgadget.com/?utm_source=friends-of-friends">לינק הזה</a><br>
+                או יותר טוב: תכניס כאן את שמך, תלחץ על "העתק קישור" ותשלח את הקישור המועתק לחבריך.
+                <input type="text" ng-model="user.name">
+                <button ng-click="copy('-he')" class="btn secondary copy-clipboard">העתק קישור</button>
+            </p>
+        </div>
+    </div>
+
+</div>
