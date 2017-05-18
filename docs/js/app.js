@@ -93,7 +93,11 @@ app.directive("personalMsg", function() {
             scope.source = getParameterByName("utm_source");
             console.log(scope.campaign + ' ' + scope.medium);
             scope.copy = function(lang) {
-                copyTextToClipboard('https://devgadget.com/?utm_source=friends-of-friends' + lang + '&utm_campaign=' + encodeURI(scope.user.name));
+                var linkToCopy = 'https://devgadget.com/?utm_source=friends-of-friends' + lang;
+                if (scope.user.name.trim()) {
+                    linkToCopy += '&utm_campaign=' + encodeURI(scope.user.name.trim());
+                }
+                copyTextToClipboard(linkToCopy);
             };
        }
     };
