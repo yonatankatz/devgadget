@@ -19,7 +19,8 @@ decode.onclick = function() {
 	$(document).ready(function() {
 		try
 		{
-			var byteArr = base64js.toByteArray(input.value)
+			var text = input.value.replace(/ |\n|\t|\r/g,""); // removing whitespaces
+			var byteArr = base64js.toByteArray(text)
 			output.innerHTML =  new TextDecoder('utf-8').decode(byteArr)
 		}
 		catch (err)
