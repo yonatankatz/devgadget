@@ -13,20 +13,17 @@
             <span style="font-size:30px; font-family: Verdana, Geneva, sans-serif;" >Thanks for clicking on the link I posted on Facebook.<br><br></span>
             The reason I wanted you to click
             here is because I want to increase this website traffic. Websites over the internet are measured by their traffic, and every single user counts!<br>
-            to be honest with you, if you are not a developer you have nothing to do here; I am honestly appreciate your help, and I would be glad if you'll ask your friends
+            To be honest with you, if you are not a developer you have nothing to do here; I am honestly appreciate your help, and I would be glad if you'll ask your friends
             to visit this site as well.<br><br>
             But, If you are a developer, you have here some nice tools you can use. Obviously, completely free. We are planning to enlarge our tools arsenal, feel free to jump here
             once in a while.
             <br><br>
             Thank you so much,<br>
             Yonatan.<br><br>
-            <p>
-                In order to forward the link to your friends, you can simply click on the share button:
+            <p><br><br>
+                Ho, I almost forgot the most important button:
                 <div class="fb-share-button" data-href="https://devgadget.com?utm_source=facebook&amp;utm_medium=share" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevgadget.com%2F%3Futm_source%3Dfacebook%26utm_medium%3Dshare&amp;src=sdkpreparse">Share</a></div>
                 <br>
-                Or, you can enter your name here, press on "copy link" - and send the copied link to your network!
-                <input type="text" ng-model="user.name">
-                <button ng-click="copy('-en')" class="btn secondary copy-clipboard">Copy link</button>
             </p>
         </div>
         <div ng-if="medium === 'personal-he'" style="direction: rtl;">
@@ -40,19 +37,16 @@
     <br><br>
             תודה רבה!<br>
             יונתן
-        <p>
-            כדי לשתף את הלינק הלאה, נשמח אם תפנה את חברך ל
-     <a href="https://devgadget.com/?utm_source=friends-of-friends">לינק הזה</a><br> תשתף את האתר באמצעות כפתור ה <div class="fb-share-button" data-href="https://devgadget.com?utm_source=facebook&amp;utm_medium=share" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevgadget.com%2F%3Futm_source%3Dfacebook%26utm_medium%3Dshare&amp;src=sdkpreparse">Share</a></div> <br>
-            או הכי טוב: תכניס כאן את שמך, תלחץ על "העתק קישור" ותשלח את הקישור המועתק לחבריך.
-            <input type="text" ng-model="user.name">
-            <button ng-click="copy('-he')" class="btn secondary copy-clipboard">העתק קישור</button>
+        <p><br><br>
+            מיותר לומר שאשמח אם תלחץ על כפתור ה share?
+            <div class="fb-share-button" data-href="https://devgadget.com?utm_source=facebook&amp;utm_medium=share" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevgadget.com%2F%3Futm_source%3Dfacebook%26utm_medium%3Dshare&amp;src=sdkpreparse">Share</a></div>
         </p>
         </div>
     </div>
-    <div ng-if="source === 'friends-of-friends-en' || source === 'friends-of-friends-he'" style="background-color:#666699; color: white;border-radius: 25px; padding: 40px; font-size:24px" >
-        <div ng-if="source === 'friends-of-friends-en'">
+    <div ng-if="source === 'friends-of-friends-en'" style="background-color:#666699; color: white;border-radius: 25px; padding: 40px; font-size:24px" >
+        <div>
             Hi,<br>
-            <span style="font-size:30px; font-family: Verdana, Geneva, sans-serif;" >Thanks for joining {{campaign}}'s efforts, to increase this website rating.<br><br></span>
+            <span style="font-size:30px; font-family: Verdana, Geneva, sans-serif;" >Thanks for helping us increasing the website rating.<br><br></span>
             Our goal is to increase this website rating. Websites over the internet are measured by their traffic, and every single user counts!<br>
             If you are not a developer you have nothing to do here; We honestly appreciate your help, and we would be glad if you'll ask your friends
             to visit this site as well.<br><br>
@@ -60,28 +54,11 @@
             once in a while.
             <br><br>
             Thank you so much,<br>
-            DevGadget team (and {{campaign}} :) ).<br><br>
+            DevGadget team.<br><br>
             <p>
                 Sharing is caring :)
                 <div class="fb-share-button" data-href="https://devgadget.com?utm_source=facebook&amp;utm_medium=share" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevgadget.com%2F%3Futm_source%3Dfacebook%26utm_medium%3Dshare&amp;src=sdkpreparse">Share</a></div>
             </p>
         </div>
-        <div ng-if="source === 'friends-of-friends-he'" style="direction: rtl;">
-            הי,<br><br>
-            <span style="font-size:30px; font-family: Verdana, Geneva, sans-serif;" >תודה שנענית לבקשתו של {{campaign}} ולחצת על הלינק!<br><br></span>
-            אחד המדדים לפיו אתרים נמדדים זה כמות המבקרים בו, ואנחנו מנסים להעלות את הדירוג של האתר הזה. כל גולש נחשב!<br>
-            אם אתה לא מתכנת מחשבים - אין לך כל כך מה לעשות באתר הזה.  אמנם נשמח אם תכנס אליו מדי פעם ותעבור בין הדפים, אבל זה לא יהיה שימושי יותר מדי עבורך.
-            <br>
-            לעומת זאת, אם אתה מתכנת מחשבים, האתר הזה יכול להיות לך לעזר. נשמח אם תשתמש בו, תציע הצעות לכלים נוספים ותשתף אותו עם חבריך.
-            אנחנו מצידנו נעשה מאמץ להרחיב את מספר הכלים באתר.
-            <br><br>
-            תודה רבה!<br>
-            DevGadget
-            <p>
-                תהיה חבר ותשתף? :)
-            <div class="fb-share-button" data-href="https://devgadget.com?utm_source=facebook&amp;utm_medium=share" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevgadget.com%2F%3Futm_source%3Dfacebook%26utm_medium%3Dshare&amp;src=sdkpreparse">Share</a></div>
-            </p>
-        </div>
     </div>
-
 </div>
