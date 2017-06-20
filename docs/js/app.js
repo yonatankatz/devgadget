@@ -156,7 +156,7 @@ app.directive("selectOnFocus", function($timeout) {
             });
             }, 1);
         }
-      }
+      };
 });
 
 app.directive("copyToClipboard", function($timeout) {
@@ -170,5 +170,5 @@ app.directive("copyToClipboard", function($timeout) {
                 window.copyTextToClipboard(val);
             });
         }
-      }
+      };
 });
