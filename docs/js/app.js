@@ -82,6 +82,27 @@ app.directive("analytics", function() {
       };
   });
 
+app.directive("personalMsg", function() {
+    return {
+       restrict : "A",
+       templateUrl : "directives/msg.html",
+       link: function(scope, element, attrs) {
+            scope.user = {name : ''};
+            scope.medium = getParameterByName("utm_medium");
+            scope.campaign = getParameterByName("utm_campaign");
+            scope.source = getParameterByName("utm_source");
+            console.log(scope.campaign + ' ' + scope.medium);
+            scope.copy = function(lang) {
+                var linkToCopy = 'https://devgadget.com/?utm_source=friends-of-friends' + lang;
+                if (scope.user.name.trim()) {
+                    linkToCopy += '&utm_campaign=' + encodeURI(scope.user.name.trim());
+                }
+                copyTextToClipboard(linkToCopy);
+            };
+       }
+    };
+});
+
  app.directive("defaultComponent", function($timeout) {
        return {
           restrict : "A",
@@ -135,7 +156,7 @@ app.directive("selectOnFocus", function($timeout) {
             });
             }, 1);
         }
-      }
+      };
 });
 
 app.directive("copyToClipboard", function($timeout) {
@@ -149,5 +170,5 @@ app.directive("copyToClipboard", function($timeout) {
                 window.copyTextToClipboard(val);
             });
         }
-      }
+      };
 });
