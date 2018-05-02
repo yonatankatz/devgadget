@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Json Formatter</title>
+    <link rel="shortcut icon" href="images/favicon-96x96.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon-96x96.png" type="image/x-icon">
+    <meta property='og:title' content="Json Formatter"/>
+    <meta property='og:type' content='Article'/>
+    <meta property='og:site_name' content='DevGadget'/>
+    <meta property='og:image' content='https://devgadget.com/images/DevGadget.jpg'/>
+    <meta property='og:description' content="Online JSON Formatter , includes syntax highlighting and error detection"/>
+    <meta property='og:url' content="https://devgadget.com"/>
+    <meta name="description" content="Online JSON Formatter , includes syntax highlighting and error detection" />
+    <meta name="keywords" content="Json Formatter, String Formatting, Online Tools, Free" />
+    <meta name="robots" content="index, follow, NOODP" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        (function(e,r){function n(e,r){e[r]=function(){e.push([r].concat(Array.prototype.slice.call(arguments,0)))}}function o(){var e=r.location.hostname.match(/[a-z0-9][a-z0-9\-]+\.[a-z\.]{2,6}$/i),n=e?e[0]:null,o="; domain=."+n+"; path=/; expires=" + new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toUTCString();r.cookie=r.referrer&&-1===r.referrer.indexOf(n)?"jaco_referer="+r.referrer+o:"jaco_referer="+t+o}var a="JacoRecorder",t="none";!function(e,r,t,i){if(!t.__VERSION){e[a]=t;for(var c=["init","identify","startRecording","stopRecording","removeUserTracking","setUserInfo","trackEvent"],s=0;s<c.length;s++)n(t,c[s]);o(),t.__VERSION=2.1,t.__INIT_TIME=1*new Date;var f=r.createElement("script");f.async=!0,f.setAttribute("crossorigin","anonymous"),f.src=i;var d=r.getElementsByTagName("head")[0];d.appendChild(f)}}(e,r,e[a]||[],"https://recorder-assets.getjaco.com/recorder_v2.js")}).call(window,window,document);
+        window.JacoRecorder.init("7db92c5c-d3a7-4a12-b73c-9fe5513be84c");
+    </script>
+</head>
+<body ng-app="app">
+<link rel="stylesheet" href="css/3rd-party/bootstap/bootstrap.min.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/dev.css">
+    <div analytics></div>
+    <div menu></div>
+    <div class="row">
+        <!-- real body -->
+        <div class="col-md-9 col-xs-12 root" >
+            <div class="col-md-12 sideNavLg-big">
+                <div class="pgHolder">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="content-inner">
+                                <h1>Json Formatter</h1>
+                                <div id="notifications"></div>
+                                <div class="form-wrapper">
+                                    <div class="title first">
+                                        <span class="option"></span> <span class="option-text">Copy-paste
+                            the string to reformat</span>
+                                    </div>
+                                    <textarea id="input" name="input" class="textarea-input" default-component ></textarea>
+                                    <div><span id="errorMsg"></span></div>
+                                    <div class="buttons">
+                                        <button default-action class="btn primary" id="formatJson">Format Json</button>
+                                        <label class="checkbox checkbox-inline"><input id="syntaxHighlight" type="checkbox" checked>Syntax highlighting</label>
+                                    </div>
+                                </div>
+                                <div class="form-wrapper">
+                                    <div class="title first">
+                                        <span class="option"></span> <span class="option-text">Your
+                            Output : </span>
+                                    </div>
+                                    <div id="outputHighlighted"></div>
+                                    <textarea select-on-focus readonly id="outputRegular"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>
+                        JSON, or JavaScript Object Notation, is a minimal, readable format for structuring data. It is used primarily
+                        to transmit data between servers and web applications, as an alternative to XML.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/3rd-party/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="js/3rd-party/bootstrap/bootstrap.min.js"  type="text/javascript"></script>
+    <script src="js/3rd-party/angular/angular.min.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/json.js" type="text/javascript"></script>
+</body>
+</html>
